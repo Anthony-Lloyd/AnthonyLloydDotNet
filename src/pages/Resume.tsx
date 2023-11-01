@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { marked } from 'marked'; // corrected the import statement
+  import { marked } from 'marked';
 
 import '../index.css';
 import './About.css';
@@ -43,7 +43,7 @@ const About: React.FC = () => {
         <div className="row justify-content-center mb-5">
           <div className="col-lg-8 text-center">
             <h2 className="display-4 mb-4">About Me</h2>
-            <p className="lead" dangerouslySetInnerHTML={createMarkup(intro)}></p> {/* Rendered using dangerouslySetInnerHTML */}
+            <p className="lead">{intro}</p>
           </div>
         </div>
 

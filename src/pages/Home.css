@@ -1,0 +1,9 @@
+/* Adjust the value based on the height of your navbar */
+[id]:before {
+  content: "";
+  display: block;
+  height: 80px;  /* roughly the height of your navbar */
+  margin: -80px 0 0;
+  visibility: hidden;
+  pointer-events: none;
+}

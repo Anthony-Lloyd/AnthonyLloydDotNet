@@ -1,13 +1,15 @@
 import React from 'react';
-
+import '../index.css';
 const Contact: React.FC = () => {
   return (
-    <div className="contact-container">
-      <form action="/submit_contact" method="post">
-        <input type="text" name="name" placeholder="Name" />
-        <input type="email" name="email" placeholder="Email" />
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Submit</button>
+    <div className="container mt-5">
+      <h2>Contact Me</h2>
+      <form>
+        <div className="form-group">
+          <label>Name</label>
+          <input type="text" className="form-control" />
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     </div>
   );

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "_NavBar",
+    "type": "component"
+  },
+  {
+    "id": "_Footer",
+    "type": "component"
+  },
+  {
+    "id": "Home",
+    "type": ""
+  },
+  {
+    "id": "About",
+    "type": ""
+  },
+  {
+    "id": "Certifications",
+    "type": ""
+  },
+  {
+    "id": "Projects",
+    "type": ""
+  },
+  {
+    "id": "Resume",
+    "type": ""
+  }
+]

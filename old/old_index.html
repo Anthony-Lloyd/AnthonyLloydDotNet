@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anthony Lloyd</title>
+        <link = rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+
+<div id ="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Title</p>
+            <h1>my name <span>Anthony Lloyd</span><br>From Melbourne Australia</h1>
+        </div>
+    </div>
+</div>
+<!------------about------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')" >Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>X1</span><br>contents</li>
+                        <li><span>Y1</span><br>contents</li>
+                        <li><span>Z1</span><br>contents</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>X2</span><br>contents</li>
+                        <li><span>Y2</span><br>contents</li>
+                        <li><span>Z2</span><br>contents</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>X3</span><br>contents</li>
+                        <li><span>Y3</span><br>contents</li>
+                        <li><span>Z3</span><br>contents</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+<!------------services------------>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+    // Remove classes from all tabs and contents
+    for(let tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(let tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    // Add active classes back to the clicked tab and its associated content
+    document.querySelector(`.tab-links[onclick="opentab('${tabname}')"]`).classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+</script>
+
+</body>
+</html>
+

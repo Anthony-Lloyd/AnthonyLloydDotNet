@@ -1,5 +1,5 @@
 {
-  "name": "my-portfolio",
+  "name": "AnthonyLloydDotNet",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -52,5 +52,5 @@
     "@types/react-dom": "^18.2.14",
     "gh-pages": "^6.0.0"
   },
-  "homepage":  "https://github.com/Anthony-Lloyd02/AnthonyLloyd.net" 
+  "homepage":  "https://AnthonyLloyd.net/" 
 }

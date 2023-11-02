@@ -1,4 +1,7 @@
 import React, { Suspense, useState, useEffect, ComponentType } from 'react';
+
+import { DarkModeProvider } from './pages/_DarkModeContext';
+
 import pages from './pages/_PagesConfig.json';
 
 const App: React.FC = () => {
@@ -21,32 +24,33 @@ const App: React.FC = () => {
                     });
             });
         
-        // Special handling for Navbar and Footer since they're constants
-        import(`./pages/_NavBar`).then(module => {
-            setDynamicComponents(prev => ({ ...prev, _NavBar: module.default }));
-        });
-        
-        import(`./pages/_Footer`).then(module => {
-            setDynamicComponents(prev => ({ ...prev, _Footer: module.default }));
+        // Special handling for Navbar, Footer, and DarkModeToggle since they're constants
+        ['_NavBar', '_Footer', '_DarkModeToggle'].forEach(componentId => {
+            import(`./pages/${componentId}`).then(module => {
+                setDynamicComponents(prev => ({ ...prev, [componentId]: module.default }));
+            });
         });
 
     }, []);
 
     return (
-        <>
-            {dynamicComponents["_NavBar"] && React.createElement(dynamicComponents["_NavBar"])}
-            <Suspense fallback={<div>Loading...</div>}>
-                {pages.filter(page => page.type !== "component").map(page => {
-                    const PageComponent = dynamicComponents[page.id];
-                    return (
-                        <div id={page.id} key={page.id}>
-                            {PageComponent && <PageComponent />}
-                        </div>
-                    );
-                })}
-            </Suspense>
-            {dynamicComponents["_Footer"] && React.createElement(dynamicComponents["_Footer"])}
-        </>
+        <DarkModeProvider>
+            <>
+                {dynamicComponents["_NavBar"] && React.createElement(dynamicComponents["_NavBar"])}
+                <Suspense fallback={<div>Loading...</div>}>
+                    {pages.filter(page => page.type !== "component").map(page => {
+                        const PageComponent = dynamicComponents[page.id];
+                        return (
+                            <div id={page.id} key={page.id}>
+                                {PageComponent && <PageComponent />}
+                            </div>
+                        );
+                    })}
+                </Suspense>
+                {dynamicComponents["_DarkModeToggle"] && React.createElement(dynamicComponents["_DarkModeToggle"])}
+                {dynamicComponents["_Footer"] && React.createElement(dynamicComponents["_Footer"])}
+            </>
+        </DarkModeProvider>
     );
 }
 

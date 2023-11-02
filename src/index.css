@@ -1,53 +1,238 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+:root {
+    /* Color Pallete */
+    --primary-start: rgb(47, 96, 165);
+    --primary-end: rgb(31, 58, 95);
+    --primary-shadow: rgba(0,0,0,0.1);
+    --secondary-start: #28a745;
+    --secondary-dark: #1e7e34;
+    --theme-light-begin: rgba(245,245,245,1);
+    --theme-light-end: rgba(220,220,220,1);
+    --theme-light-text: #212529;
+    --theme-light-subtext: #555555;
+    --theme-light-hover: rgba(0,0,0,0.2);
+    --theme-light-active: rgba(0,0,0,0.5);
+    --theme-dark-begin: rgba(30,30,30,1);
+    --theme-dark-end: rgba(60,60,60,1);
+    --theme-dark-text: #f8f9fa;
+    --theme-dark-subtext: #b0b0b0;
+    --theme-dark-hover: rgba(0,0,0,0.2);
+    --theme-dark-active: rgba(0,0,0,0.5);
+}
+
 /* Base Styles */
 body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
 a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-
 a:hover, a:focus {
-  color: var(--secondary-color);
-  text-decoration: underline;
+    text-decoration: underline;
 }
-
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-:root {
-  --primary-color: #3498db; /* Kept original color for primary */
-  --secondary-color: #9b59b6; /* Adjusted for a subtle purple as secondary for a dark theme contrast */
-  --light-bg: #f8f9fa; /* Typically the color for bg-light in Bootstrap */
-  --dark-text: #343a40; /* Typically the color for text-dark in Bootstrap */
+[data-theme='light'] {
+    --bg-start: var(--theme-light-begin);
+    --bg-end: var(--theme-light-end);
+    --text: var(--theme-light-text);
+    --hover: var(--theme-light-hover);
+    --active: var(--theme-light-active);
 }
 
-.bg-light {
-  background-color: var(--light-bg) !important;
+[data-theme='dark'] {
+    --bg-start: var(--theme-dark-begin);
+    --bg-end: var(--theme-dark-end);
+    --text: var(--theme-dark-text);
+    --hover: var(--theme-dark-hover);
+    --active: var(--theme-dark-active);
+}
+/*=====================================NAVBAR=================================*/
+.custom-navbar-bg {
+    background: linear-gradient(90deg, var(--primary-start) 0%, var(--primary-end) 100%);
+    box-shadow: 0px 5px 15px var(--primary-shadow);
+    display: flex;
+    justify-content: space-between;
 }
 
-.text-dark {
-  color: var(--dark-text) !important;
+.navbar {
+    display: flex;
+    justify-content: space-between;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.navbar-brand, 
+.nav-link {
+    color: var(--theme-dark-text);
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
 }
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2.5rem;
+    order: -1;
+}
+
+.navbar-brand:hover{
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: none;
+    border-radius: 5px;
+    color: var(--theme-dark-text)!important;
+}
+.nav-link:hover {
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: none;
+    border-radius: 5px;
+    color: var(--theme-dark-text)!important;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+.nav-link.active {
+    color: var(--primary-start)!important;
+    background-color: var(--theme-dark-text)!important;
+    border-radius: 5px!important;
+    padding: 0.5rem 1rem!important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)!important;
+}
+[data-theme='dark'] .nav-link.active {
+    color: var(--theme-dark-text) !important;
+    background: linear-gradient(90deg, var(--theme-dark-begin) 0%, var(--theme-dark-end) 100%);
+
+}
+
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+  
+
+/*=====================================NAVBAR=================================*/
+
+/*=====================================HOME=================================*/
+.hero-section {
+    color: var(--theme-light-text) !important;
+    background: linear-gradient(90deg, var(--theme-light-begin) 0%, var(--theme-light-end) 100%);
+    transition: background 0.3s ease-in-out;
+    animation: fadeInUp 0.5s forwards;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+.hero-section.lead {
+    color: var(--theme-light-subtext) !important;
+}
+
+[data-theme='dark'] .hero-section {
+    color: var(--theme-dark-text) !important;
+    background: linear-gradient(90deg, var(--theme-dark-begin) 0%, var(--theme-dark-end) 100%);
+}
+[data-theme='dark'] .hero-section .lead {
+    color: var(--theme-dark-subtext) !important;
+}
+.hero-section img {
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Common styling for the hamburger */
+.hamburger-inner, 
+.hamburger-inner::before, 
+.hamburger-inner::after {
+    background-color: white!important;
+}
+
+/* Your previous CSS for other components in dark mode */
+[data-theme='dark'] .hero-section .lead {
+    color: var(--theme-dark-subtext) !important;
+}
+/*=====================================HOME=====================================*/
+
+/*=====================================BUTTONS==============================*/
+/*====================BIG BUTTONS==================*/
+.btn-primary, .btn-outline-primary{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.btn-primary{
+    background: var(--primary-start);
+    margin-bottom: 10px;
+}
+.btn-primary:hover{
+    background: var(--primary-end);
+}
+.btn-outline-primary{
+    background: none;
+    border: 1px solid var(--secondary-start);
+    color: var(--secondary-dark);
+}
+.btn-outline-primary:hover{
+    background: var(--secondary-start);
+    border: none;
+    color: white;
+}
+/*=====================================BUTTONS==============================*/
+
+/*=====================================MEDIA====================================*/
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: calc(1.5rem + 1.5vw);
+        order: 0!important;
+        margin-left: 0;
+      }
+    }
+@media (min-width: 576px) {
+    .navbar-brand {
+        font-size: calc(1.7rem + 1.5vw);
+        order: 0!important;
+      }
+}
+@media (min-width: 768px) {
+
+    .navbar-brand {
+        font-size: 2.3rem;
+        order: 0!important;
+        margin-right: auto;
+      }
+      .display-1{
+        font-size: 3rem!important;
+    }
+}
+@media (min-width: 992px) {
+    .navbar-brand {
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 3rem;
+    }
+}
+/*=====================================MEDIA=================================*/
+/*=====================================ANIMATIONS=============================*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*=====================================ANIMATIONS==============================*/

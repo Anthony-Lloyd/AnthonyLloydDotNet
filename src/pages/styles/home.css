@@ -1,0 +1,160 @@
+/* ===== HERO SECTION STYLES ===== */
+
+.hero-section {
+  color: var(--theme-light-text)!important;
+  background: linear-gradient(90deg, var(--theme-light-begin) 0%, var(--theme-light-end) 100%);
+  transition: background 0.3s ease-in-out;
+  animation: fadeInUp 0.5s forwards;
+}
+.hero-section.lead {
+  color: var(--theme-light-subtext)!important;
+}
+
+[data-theme='dark'] .hero-section {
+  color: var(--theme-dark-text)!important;
+  background: linear-gradient(90deg, var(--theme-dark-begin) 0%, var(--theme-dark-end) 100%);
+}
+
+[data-theme='dark'] .hero-section .lead {
+  color: var(--theme-dark-subtext) !important;
+
+}
+
+/* ===== BUTTON STYLES ===== *
+/* Improved Button Styles */
+
+.btn {
+  padding: 12px 24px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.hero-section img {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.display-1 {
+  font-size: 2rem;
+}
+
+/* Adjustments for Spacing and Stacking on Mobile */
+
+/* By default, add some space between buttons */
+.btn-outline-primary.btn-lg {
+  margin-left: 16px;
+}
+
+/* On smaller screens, stack the buttons */
+@media (max-width: 576px) {
+  .btn-primary.btn-lg {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px; /* Add space between stacked buttons */
+  }
+
+  .btn-outline-primary.btn-lg {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .btn-primary.btn-lg {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px; /* Add space between stacked buttons */
+  }
+
+  .btn-outline-primary.btn-lg {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  /* Adjust the font size of the buttons */
+  .btn-primary.btn-lg,
+  .btn-outline-primary.btn-lg {
+    width: 100%; /* Take the full width */
+    margin: 8px 0; /* Add space between stacked buttons */
+    font-size: 0.9rem; /* Reduce the font size of the buttons */
+  }
+
+  /* Increase the image size */
+  .img-fluid.rounded.shadow-lg {
+    width: 100%; /* Make the image take full width */
+    height: auto;
+  }
+
+  /* Remove width adjustment for .display-1 */
+  .display-1 {
+    font-size: 2rem; /* Reset to your original size if needed */
+  }
+
+  /* Assuming you have a container for the image and buttons */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust the width of the container as needed */
+  .container {
+    max-width: 800px; /* Adjust to your layout requirements */
+  }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .btn-primary.btn-lg,
+  .btn-outline-primary.btn-lg {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .btn-primary.btn-lg {
+    margin-bottom: 12px; /* Add space between stacked buttons */
+  }
+
+  .hero-section img {
+    width: 100%;
+    height: auto;  /* Ensures the image maintains its aspect ratio */
+    border-radius: 5px; /* Optional: gives a rounded corner to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to the image */
+  }
+  .display-1 {
+    font-size: 2rem!important;
+  }
+}
+
+
+
+
+/* Image Styles */
+.hero-section img {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow for contrast with background */
+}
+
+/* Animation Styles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -16,3 +16,21 @@ Hello! I'm a dedicated professional with a passion for **IT** and **cybersecurit
 - Metasploit, Burp Suite
 - AWS, Azure
 - Various IDS/IPS solutions
+
+## Technologies I've Worked With
+- Wireshark, nmap
+- Metasploit, Burp Suite
+- AWS, Azure
+- Various IDS/IPS solutions
+
+## Technologies I've Worked With
+- Wireshark, nmap
+- Metasploit, Burp Suite
+- AWS, Azure
+- Various IDS/IPS solutions
+
+## Technologies I've Worked With
+- Wireshark, nmap
+- Metasploit, Burp Suite
+- AWS, Azure
+- Various IDS/IPS solutions

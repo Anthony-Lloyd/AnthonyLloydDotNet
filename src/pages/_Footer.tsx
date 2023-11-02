@@ -1,10 +1,12 @@
 import React from 'react';
 import '../index.css';
+
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-white py-4">
+    <footer className="bg-light text-dark py-4">
       <div className="container">
         <div className="row">
           <div className="col-md-6 text-center text-md-left">
@@ -14,9 +16,9 @@ const Footer: React.FC = () => {
             <p className="mb-0">Email: contact@anthonylloyd.net</p>
           </div>
           <div className="col-md-12 text-center mt-3">
-            <a href="#" className="text-white mr-3"><i className="fab fa-facebook"></i></a>
-            <a href="#" className="text-white mr-3"><i className="fab fa-twitter"></i></a>
-            <a href="#Home" className="btn btn-dark btn-sm mt-3">Back to Top</a>
+            <a href="#" className="text-white mr-3"><i className="fab fa-linkedin"></i></a>
+            <a href="#" className="text-white mr-3"><i className="fab fa-github"></i></a>
+            <a href="#Home" className="btn btn-light btn-sm mt-3">Back to Top</a>
           </div>
         </div>
       </div>

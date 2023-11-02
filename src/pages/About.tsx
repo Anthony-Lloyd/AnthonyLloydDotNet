@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { marked } from 'marked'; // corrected the import statement
 
 import '../index.css';
-import './About.css';
+import './styles/about.css';
 
 const About: React.FC = () => {
   const [intro, setIntro] = useState<string>('');

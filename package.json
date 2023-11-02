@@ -6,12 +6,14 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/bootstrap": "^5.2.8",
     "@types/jest": "^27.5.2",
     "@types/marked": "^6.0.0",
     "@types/node": "^16.18.60",
     "@types/react-router-dom": "^5.3.3",
     "bootstrap": "^5.3.2",
     "gray-matter": "^4.0.3",
+    "hamburgers": "^1.2.1",
     "marked": "^9.1.4",
     "react": "^0.0.0-experimental-08a39539f-20231031",
     "react-dom": "^0.0.0-experimental-08a39539f-20231031",
@@ -52,5 +54,5 @@
     "@types/react-dom": "^18.2.14",
     "gh-pages": "^6.0.0"
   },
-  "homepage":  "https://AnthonyLloyd.net/" 
+  "homepage": "https://www.AnthonyLloyd.net/"
 }

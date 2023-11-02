@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { marked } from 'marked'; // corrected the import statement
 import '../index.css';
-import './Certifications.css';
+import './styles/certifications.css';
 
 const Certifications: React.FC = () => {
   const [certifications, setCertifications] = useState<any[]>([]);

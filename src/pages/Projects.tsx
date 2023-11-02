@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { marked } from 'marked'; 
 import '../index.css';
-import './Projects.css';
+import './styles/projects.css';
 
 const Projects: React.FC = () => {
   const [projects, setProjects] = useState<any[]>([]);

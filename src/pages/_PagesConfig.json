@@ -4,6 +4,10 @@
     "type": "component"
   },
   {
+    "id": "_DarkModeToggle",
+    "type": "component"
+  },
+  {
     "id": "_Footer",
     "type": "component"
   },

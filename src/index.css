@@ -217,10 +217,16 @@ html {
     .navbar-brand {
         font-size: 2.5rem;
     }
+    .hamburger {
+        display: none!important;
+    }
 }
 @media (min-width: 1200px) {
     .navbar-brand {
         font-size: 3rem;
+    }
+    .hamburger {
+        display: none!important;
     }
 }
 /*=====================================MEDIA=================================*/

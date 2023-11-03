@@ -5,7 +5,7 @@
     /* Color Pallete */
     --primary-start: rgb(47, 96, 165);
     --primary-end: rgb(31, 58, 95);
-    --primary-shadow: rgba(0,0,0,0.1);
+    --shadow: rgba(0,0,0,0.1);
     --secondary-start: #28a745;
     --secondary-dark: #1e7e34;
     --theme-light-begin: rgba(245,245,245,1);
@@ -56,135 +56,53 @@ html {
     --hover: var(--theme-dark-hover);
     --active: var(--theme-dark-active);
 }
+
+
+.bg-light {
+    color: var(--theme-light-text);
+    background: linear-gradient(90deg, var(--theme-light-begin) 0%, var(--theme-light-end) 100%);
+  }
+
+[data-theme='dark'] .bg-light{
+color: var(--theme-dark-text)!important;
+background: linear-gradient(90deg, var(--theme-dark-begin) 0%, var(--theme-dark-end) 100%);
+}
 /*=====================================NAVBAR=================================*/
-.custom-navbar-bg {
-    background: linear-gradient(90deg, var(--primary-start) 0%, var(--primary-end) 100%);
-    box-shadow: 0px 5px 15px var(--primary-shadow);
-    display: flex;
-    justify-content: space-between;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-}
-
-.navbar-brand, 
-.nav-link {
-    color: var(--theme-dark-text);
-    transition: color 0.3s, transform 0.3s, background-color 0.3s;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.navbar-brand {
-    font-weight: bold;
-    font-size: 2.5rem;
-    order: -1;
-}
-
-.navbar-brand:hover{
-    transform: translateY(-2px) scale(1.05);
-    text-shadow: none;
-    border-radius: 5px;
-    color: var(--theme-dark-text)!important;
-}
-.nav-link:hover {
-    transform: translateY(-2px) scale(1.05);
-    text-shadow: none;
-    border-radius: 5px;
-    color: var(--theme-dark-text)!important;
-}
-
-.nav-link {
-    font-size: 1.2rem;
-}
-
-.nav-link.active {
-    color: var(--primary-start)!important;
-    background-color: var(--theme-dark-text)!important;
-    border-radius: 5px!important;
-    padding: 0.5rem 1rem!important;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)!important;
-}
-[data-theme='dark'] .nav-link.active {
-    color: var(--theme-dark-text) !important;
-    background: linear-gradient(90deg, var(--theme-dark-begin) 0%, var(--theme-dark-end) 100%);
-
-}
-
-
-.navbar-nav {
-    margin-left: auto;
-}
-
-  
 
 /*=====================================NAVBAR=================================*/
 
 /*=====================================HOME=================================*/
-.hero-section {
-    color: var(--theme-light-text) !important;
-    background: linear-gradient(90deg, var(--theme-light-begin) 0%, var(--theme-light-end) 100%);
-    transition: background 0.3s ease-in-out;
-    animation: fadeInUp 0.5s forwards;
-    font-size: clamp(1rem, 2vw, 2rem);
-}
-.hero-section.lead {
-    color: var(--theme-light-subtext) !important;
-}
 
-[data-theme='dark'] .hero-section {
-    color: var(--theme-dark-text) !important;
-    background: linear-gradient(90deg, var(--theme-dark-begin) 0%, var(--theme-dark-end) 100%);
-}
-[data-theme='dark'] .hero-section .lead {
-    color: var(--theme-dark-subtext) !important;
-}
-.hero-section img {
-    max-width: 100%;
-    aspect-ratio: 16/9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-/* Common styling for the hamburger */
-.hamburger-inner, 
-.hamburger-inner::before, 
-.hamburger-inner::after {
-    background-color: white!important;
-}
 
-/* Your previous CSS for other components in dark mode */
-[data-theme='dark'] .hero-section .lead {
-    color: var(--theme-dark-subtext) !important;
-}
 /*=====================================HOME=====================================*/
-
 /*=====================================BUTTONS==============================*/
 /*====================BIG BUTTONS==================*/
-.btn-primary, .btn-outline-primary{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
+.btn-primary, .btn-outline-primary, .btn-light{
     text-align: center;
-    transition: background-color 0.3s ease;
+    color: var(--theme-dark-text)!important;
+    text-shadow: 0.5px 0.5px var(--shadow)!important;
 }
-.btn-primary{
-    background: var(--primary-start);
-    margin-bottom: 10px;
+.btn-primary, .btn-light {
 }
-.btn-primary:hover{
-    background: var(--primary-end);
+.btn-primary:hover, .btn-light:hover{
 }
+
 .btn-outline-primary{
     background: none;
-    border: 1px solid var(--secondary-start);
-    color: var(--secondary-dark);
+    border: 1px solid var(--secondary-dark);
+    color: var(--secondary-dark)!important;
 }
 .btn-outline-primary:hover{
     background: var(--secondary-start);
-    border: none;
-    color: white;
+    color: var(--theme-dark-text)!important;
+    border-color: var(--secondary-start)!important;
+}
+
+[data-theme='dark'] .btn-outline-primary{
+    background: none;
+    border: 1px solid var(--secondary-start);
+    color: var(--secondary-start)!important;
 }
 /*=====================================BUTTONS==============================*/
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/_navadjust.css';
 import '../index.css';
+import './styles/home.css';
 
 const Home: React.FC = () => {
     return (

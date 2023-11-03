@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import pages from './_PagesConfig.json';
 import '../index.css';
+import './styles/navbar.css';
 import 'hamburgers/dist/hamburgers.min.css';
 
 

@@ -3,11 +3,13 @@ import { marked } from 'marked'; // corrected the import statement
 import '../index.css';
 import './styles/certifications.css';
 
+const tofetch = 'https://raw.githubusercontent.com/Anthony-Lloyd02/AnthonyLloydDotNet/main/public/cert/cert.md';
+
 const Certifications: React.FC = () => {
   const [certifications, setCertifications] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch('/cert/cert.md')
+    fetch(tofetch)
       .then((response) => response.text())
       .then((data) => {
         const sections = data.split('---').map(section => {

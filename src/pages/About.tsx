@@ -2,14 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { marked } from 'marked'; // corrected the import statement
 
 import '../index.css';
+import './styles/_navadjust.css';
 import './styles/about.css';
 
 const About: React.FC = () => {
   const [intro, setIntro] = useState<string>('');
   const [sections, setSections] = useState<any[]>([]);
 
+  const tofetch = 'https://raw.githubusercontent.com/Anthony-Lloyd02/AnthonyLloydDotNet/main/public/about/about.md';
+
   useEffect(() => {
-    fetch('/about/about.md')
+    fetch(tofetch)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

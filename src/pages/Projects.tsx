@@ -3,11 +3,14 @@ import { marked } from 'marked';
 import '../index.css';
 import './styles/projects.css';
 
+
+const tofetch = 'https://raw.githubusercontent.com/Anthony-Lloyd02/AnthonyLloydDotNet/main/public/proj/proj.md';
+
 const Projects: React.FC = () => {
   const [projects, setProjects] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch('/proj/proj.md')
+    fetch(tofetch)
       .then((response) => response.text())
       .then((data) => {
         const sections = data.split('---').map(section => {

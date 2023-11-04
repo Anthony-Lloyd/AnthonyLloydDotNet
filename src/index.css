@@ -68,43 +68,73 @@ color: var(--theme-dark-text)!important;
 background: linear-gradient(90deg, var(--theme-dark-begin) 0%, var(--theme-dark-end) 100%);
 }
 /*=====================================NAVBAR=================================*/
-
 /*=====================================NAVBAR=================================*/
-
 /*=====================================HOME=================================*/
-
-
-
 /*=====================================HOME=====================================*/
 /*=====================================BUTTONS==============================*/
 /*====================BIG BUTTONS==================*/
+
 .btn-primary, .btn-outline-primary, .btn-light{
     text-align: center;
     color: var(--theme-dark-text)!important;
     text-shadow: 0.5px 0.5px var(--shadow)!important;
 }
-.btn-primary, .btn-light {
+
+.btn-light, .btn-primary{
+    background: #0d6efd!important;
+    border: #0d6efd!important;
 }
-.btn-primary:hover, .btn-light:hover{
+
+.btn-secondary{
+    background: var(--secondary-start)!important;
+    border: var(--secondary-start)!important;
 }
+
+
 
 .btn-outline-primary{
     background: none;
-    border: 1px solid var(--secondary-dark);
+    border: 1px solid var(--secondary-dark)!important;
     color: var(--secondary-dark)!important;
 }
 .btn-outline-primary:hover{
     background: var(--secondary-start);
-    color: var(--theme-dark-text)!important;
     border-color: var(--secondary-start)!important;
+    color: var(--theme-dark-text)!important;
 }
+
+
+
+
 
 [data-theme='dark'] .btn-outline-primary{
     background: none;
     border: 1px solid var(--secondary-start);
     color: var(--secondary-start)!important;
 }
+[data-theme='dark'] .btn-outline-primary:hover{
+    background: var(--secondary-start);
+    border: 1px solid var(--secondary-start);
+    color: var(--theme-dark-text)!important;
+}
+
 /*=====================================BUTTONS==============================*/
+
+
+/*=====================================CARDS==============================*/
+.card{
+    color: var(--theme-light-text);
+    background: var(--theme-light-begin);
+  }
+  
+[data-theme='dark'] .card{
+color: var(--theme-dark-text)!important;
+background: var(--theme-dark-begin)!important;
+}
+
+
+/*=====================================CARDS==============================*/
+
 
 /*=====================================MEDIA====================================*/
 @media (max-width: 576px) {

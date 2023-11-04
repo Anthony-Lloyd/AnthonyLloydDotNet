@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { marked } from 'marked'; // corrected the import statement
 import '../index.css';
+import './styles/_navadjust.css';
 import './styles/certifications.css';
 
 const tofetch = 'https://raw.githubusercontent.com/Anthony-Lloyd02/AnthonyLloydDotNet/main/public/cert/cert.md';

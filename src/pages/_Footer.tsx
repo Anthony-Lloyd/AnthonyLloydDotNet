@@ -1,12 +1,13 @@
 import React from 'react';
 import '../index.css';
+import './styles/_footer.css';
 
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-light text-dark py-4">
+    <footer className="bg-light text-dark py-4" id = 'footer'>
       <div className="container">
         <div className="row">
           <div className="col-md-6 text-center text-md-left">

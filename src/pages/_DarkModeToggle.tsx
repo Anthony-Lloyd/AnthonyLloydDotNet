@@ -11,7 +11,7 @@ const DarkModeToggle: React.FC = () => {
                 <>
                     <button 
                         onClick={toggleDarkMode}
-                        className={`btn ${isDarkMode ? 'btn-dark' : 'btn-light'}`}
+                        className="btn btn-light"
                     >
                         {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                     </button>

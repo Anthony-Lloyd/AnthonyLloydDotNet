@@ -24,4 +24,7 @@ yarn-error.log*
 .ENV
 
 desktop.ini
-*.ini
+/.tmp.drivedownload
+/.tmp.driveupload
+.tmp.drivedownload
+.tmp.driveupload

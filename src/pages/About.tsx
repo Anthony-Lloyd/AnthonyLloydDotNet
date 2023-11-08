@@ -46,14 +46,14 @@ const About: React.FC = () => {
         <div className="row justify-content-center mb-5">
           <div className="col-lg-8 text-center">
             <h2 className="display-4 mb-4">About Me</h2>
-            <p className="lead" dangerouslySetInnerHTML={createMarkup(intro)}></p> {/* Rendered using dangerouslySetInnerHTML */}
+            <div className="lead" dangerouslySetInnerHTML={createMarkup(intro)}></div> {/* Rendered using dangerouslySetInnerHTML */}
           </div>
         </div>
 
-        <div className="row">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
           {sections.map((section, index) => (
-            <div key={index} className="col-md-4 mb-4">
-              <div className="card">
+            <div key={index} className="col">
+              <div className="card h-100">
                 <div className="card-body">
                   <h3 className="card-title">{section.title}</h3>
                   <div className="card-text" dangerouslySetInnerHTML={createMarkup(section.content)} />

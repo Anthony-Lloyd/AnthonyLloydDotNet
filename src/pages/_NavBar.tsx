@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <div className="container-fluid custom-navbar-bg shadow-sm">
+        <div className="container-fluid navbar-bg shadow-sm">
             <div className="container py-2">
                 <nav className="navbar navbar-expand-lg justify-content-left">
                     <a className="navbar-brand" href="#Home">Anthony Lloyd</a>

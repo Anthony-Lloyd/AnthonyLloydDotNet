@@ -1,13 +1,6 @@
 {
-  "short_name": "Anthony Lloyd",
-  "name": "Anthony Lloyd",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "256x256 128x128 64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
+  "short_name": "Under Construction",
+  "name": "Under Construction",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

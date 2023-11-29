@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/485.c68b8d13.chunk.css","mappings":"AAAA,gBACI,6CACJ,CAEA,kCACI,4CACJ","sources":["pages/styles/_footer.css"],"sourcesContent":["footer.bg-light {\n    background: var(--theme-light-begin)!important;\n}\n\n[data-theme = 'dark'] footer.bg-light {\n    background: var(--theme-dark-begin)!important;\n}"],"names":[],"sourceRoot":""}

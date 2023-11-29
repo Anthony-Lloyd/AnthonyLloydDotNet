@@ -96,7 +96,7 @@ const Certifications: React.FC = () => {
           ))}
         </ul>
                   <div className="card-progress-container">
-        <div className="progress">
+                  <div className="progress" style={{ height: '20px' }}>
           <div className={`progress-bar progress-bar-striped progress-bar-animated ${cert.progress === 100 ? 'bg-success' : 'bg-warning'}`}
                role="progressbar"
                aria-valuenow={cert.progress}

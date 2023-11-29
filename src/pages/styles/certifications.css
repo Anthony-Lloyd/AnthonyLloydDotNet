@@ -10,6 +10,7 @@
 [data-theme='dark'].certification-image-container{
   background-color: white !important; /* In case the image is transparent */
 }
+
 .certification-image {
   max-height: 230px;
   max-width: calc(100% - 20px);

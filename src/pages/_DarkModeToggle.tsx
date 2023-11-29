@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { useDarkMode } from './_DarkModeContext';
+import './styles/_darkmodetoggle.css';
 
 const DarkModeToggle: React.FC = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode();
     const [isVisible, setIsVisible] = useState(true);
 
-    // Define the base classes for the buttons
-    const buttonBaseClass = `btn ${isDarkMode ? 'btn-dark' : 'btn-light'}`;
+    const buttonBaseClass = `btn btn-light`; // Removed the responsiveClass
+
     const hideButtonBaseClass = 'btn btn-secondary';
     const showButtonClass = 'btn btn-sm btn-primary';
-
-    // Add responsive classes for mobile view
-    const responsiveClass = 'btn-block d-md-inline-block'; // 'btn-block' for xs to md screens, 'd-md-inline-block' for md and larger screens
 
     return (
         <div className="position-fixed bottom-0 right-0 mb-3 mr-3">
@@ -19,13 +17,13 @@ const DarkModeToggle: React.FC = () => {
                 <>
                     <button 
                         onClick={toggleDarkMode}
-                        className={`${buttonBaseClass} ${responsiveClass}`}
+                        className={buttonBaseClass}
                     >
                         {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                     </button>
                     <button 
                         onClick={() => setIsVisible(false)}
-                        className={`${hideButtonBaseClass} ${responsiveClass} ml-2`}
+                        className={`${hideButtonBaseClass} ml-2`}
                     >
                         Hide
                     </button>

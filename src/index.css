@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 :root {
     /* Color Pallete */
     --primary-start: rgb(47, 96, 165);
@@ -141,7 +142,17 @@ background: var(--theme-dark-begin)!important;
 
 
 /*=====================================MEDIA====================================*/
-@media (max-width: 576px) {
+/* Media query for screens with a maximum width of 320px (iPhone SE portrait) */
+@media (min-width: 320px) {
+    /* Adjust the layout for smaller screens */
+    .navbar-brand {
+        font-size: calc(1.3rem + 1.5vw) !important;
+        order: 0!important;
+        margin-left: 0;
+      }
+  }
+
+@media (min-width: 576px) {
     .navbar-brand {
         font-size: calc(1.5rem + 1.5vw);
         order: 0!important;

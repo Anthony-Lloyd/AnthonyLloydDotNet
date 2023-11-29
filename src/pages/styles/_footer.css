@@ -5,3 +5,21 @@ footer.bg-light {
 [data-theme = 'dark'] footer.bg-light {
     background: var(--theme-dark-begin)!important;
 }
+/* Styles for Font Awesome icons in the footer */
+.footer-icons {
+    font-size: 40px; /* Adjust the icon size as needed */
+    color: #007bff; /* Set the icon color to your desired color */
+    margin: 0 10px; /* Add spacing between icons */
+    text-decoration: none; /* Remove underline on hover */
+    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+  }
+  
+  /* Hover effect for icons */
+  .footer-icons:hover {
+    color: #0056b3; /* Change the icon color on hover */
+  }
+  
+  [data-theme = 'dark'] .footer-icons {
+    background: var(--theme-dark-begin)!important;
+    color: var(--theme-light-begin)!important
+}

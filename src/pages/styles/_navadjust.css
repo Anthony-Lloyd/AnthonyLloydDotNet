@@ -1,9 +1,13 @@
 /* Adjust the value based on the height of your navbar */
+
+.root{
+--amt: 200px;
+}
 :target:before {
   content: "";
   display: block;
-  height: 80px;  /* Adjust this value to match your navbar's height */
-  margin: -80px 0 0; /* This should be the same value as height but negative */
+  height: var(--amt);  /* Adjust this value to match your navbar's height */
+  margin: calc(-var(--amt)) 0 0; /* This should be the same value as height but negative */
   visibility: hidden;
   pointer-events: none;
 }

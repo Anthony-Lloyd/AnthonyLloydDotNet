@@ -1,7 +1,7 @@
 # Diploma of Information Technology (Cyber Security and Advanced Networking)
 ![image](/certifications/MONARCH.png)
 ![status](45%)
-![description]/ Cybercrime prevention, promoting workplace cybersecurity awareness, and networking best practices./ Analyzing and interpreting threat data to protect organizational infrastructure and utilizing design methodologies for security architecture./ Installing and managing virtual computing environments, along with upgrading operating systems and configuring advanced virtual networks./ Developing incident response plans, reviewing disaster recovery and contingency plans, and planning and testing enterprise communication solutions./
+![description]/ Cybercrime prevention, promoting workplace cybersecurity awareness, and networking best practices./ Analyzing and interpreting threat data to protect organizational infrastructure and utilizing design methodologies for security architecture./ Installing and managing virtual computing environments, along with upgrading operating systems and configuring advanced virtual networks./ Developing incident response plans, reviewing disaster recovery and contingency plans, and planning and testing enterprise communication solutions.
 
 ---
 

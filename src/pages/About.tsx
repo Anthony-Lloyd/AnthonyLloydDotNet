@@ -8,8 +8,8 @@ import './styles/about.css';
 const About: React.FC = () => {
   const [intro, setIntro] = useState<string>('');
   const [sections, setSections] = useState<any[]>([]);
-
-  const tofetch = 'https://raw.githubusercontent.com/Anthony-Lloyd02/AnthonyLloydDotNet/main/public/about/about.md';
+  
+  const tofetch = `${process.env.PUBLIC_URL}/about/about.md`;
 
   useEffect(() => {
     fetch(tofetch)

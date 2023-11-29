@@ -1,99 +1,112 @@
 import React, { useState, useEffect } from 'react';
-import { marked } from 'marked'; // corrected the import statement
+import { marked } from 'marked';
 import '../index.css';
 import './styles/_navadjust.css';
 import './styles/certifications.css';
 
-
+interface Certification {
+  title: string;
+  imgUrl: string;
+  progress: number;
+  description: string[];
+}
 
 const Certifications: React.FC = () => {
-  const [certifications, setCertifications] = useState<any[]>([]);
+  const [certifications, setCertifications] = useState<Certification[]>([]);
+
+  const processMarkdown = (data: string) => {
+    const sections = data.split('---').map(section => {
+      const lines = section.split('\n').filter(line => line.trim());
+      let title: string = '';
+      let imgUrl: string = '';
+      let progress: number = 100;
+      let description: string[] = [];
+
+      if (lines[0].startsWith('# ')) {
+        title = lines[0].slice(2).trim(); // Get title after '# '
+      }
+
+      const imageLine = lines[1];
+      const progressLine = lines[2];
+      const descriptionLine = lines[3];
+
+      if (imageLine.startsWith('![image]')) {
+        const match = imageLine.match(/\((.*?)\)/);
+        if (match && match[1]) {
+          // Prepend the public URL to the image URL
+          imgUrl = `${process.env.PUBLIC_URL}${match[1]}`;
+        }
+      }
+      
+
+      if (progressLine.startsWith('![status]')) {
+        const match = progressLine.match(/\((\d+)%\)/);
+        if (match) {
+          progress = parseInt(match[1], 10);
+        }
+      }
+
+      if (descriptionLine.startsWith('![description]')) {
+        description = descriptionLine.slice(16).split('/').map(item => item.trim()); // Extract and split description
+      }
+
+      return {
+        title,
+        imgUrl,
+        progress,
+        description,
+      };
+    });
+
+    setCertifications(sections);
+  };
 
   useEffect(() => {
-    // Local file path
-    const localPath = '/certifications/certifications.md';
-  
-    // Remote file paths
-    const remotePaths = [
-      'https://raw.githubusercontent.com/Anthony-Lloyd02/AnthonyLloydDotNet/main/public/cert/cert.md',
-      'https://drive.google.com/uc?id=1xN1Gmcl0XGvFJNEonACmxtazVU-PqFCY'
-    ];
-  
-    // Function to fetch and process markdown data
-    const processMarkdown = (data: string) => {
-      const sections = data.split('---').map(section => {
-        const renderer = new marked.Renderer();
-        let title = '', imgUrl = '';
-  
-        renderer.heading = (text) => { title = text; return ''; };
-        renderer.image = (href, title, text) => { imgUrl = href; return ''; };
-  
-        const htmlContent = marked(section.trim(), { renderer });
-  
-        return {
-          title,
-          imgUrl,
-          htmlContent
-        };
-      });
-  
-      setCertifications(sections);
-    };
-  
-    // Function to fetch certification data
-    const fetchCertifications = (path: RequestInfo | URL, localVersion: string | number) => {
+    const localPath = `${process.env.PUBLIC_URL}/certifications/certifications.md`;
+
+    const fetchCertifications = (path: RequestInfo | URL) => {
       fetch(path)
         .then((response) => response.text())
         .then((data) => {
-          // Extract the version from the markdown file
-          const versionMatch = data.match(/# version (\d+)/);
-          const fileVersion = versionMatch ? versionMatch[1] : '0';
-  
-          // Compare versions and decide which file to use
-          if (fileVersion >= localVersion) {
-            processMarkdown(data);
-          } else {
-            fetch(localPath)
-              .then((response) => response.text())
-              .then((localData) => processMarkdown(localData));
-          }
+          processMarkdown(data);
         })
         .catch(() => {
-          // If there's an error fetching the remote, use the local data
-          fetch(localPath)
-            .then((response) => response.text())
-            .then((localData) => processMarkdown(localData));
+          console.error('Error fetching local file');
         });
     };
-  
-    // Initial fetch for the local version
-    fetch(localPath)
-      .then((response) => response.text())
-      .then((localData) => {
-        const versionMatch = localData.match(/# version (\d+)/);
-        const localVersion = versionMatch ? versionMatch[1] : '0';
-        // Use the first remote path by default, or iterate through them if necessary
-        fetchCertifications(remotePaths[0], localVersion);
-      });
+
+    fetchCertifications(localPath);
   }, []);
 
   return (
     <section className="bg-light text-dark py-5" id="Certifications">
       <div className="container">
-        <div className="row justify-content-center mb-5">
-          <div className="col-lg-8 text-center">
-            <h2 className="display-4">Certifications</h2>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {certifications.map((cert, index) => (
+  <div key={index} className="col">
+    <div className="card bg-light text-dark border-0 h-100">
+      <div className="certification-image-container"> {/* This div is the container for the image */}
+        <img src={cert.imgUrl} alt={cert.title} className="certification-image" />
+      </div>
+      <div className="card-body">
+        <h3 className="card-title">{cert.title}</h3>
+        <ul>
+          {cert.description.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
+        </ul>
+                  <div className="card-progress-container">
+        <div className="progress">
+          <div className={`progress-bar progress-bar-striped progress-bar-animated ${cert.progress === 100 ? 'bg-success' : 'bg-warning'}`}
+               role="progressbar"
+               aria-valuenow={cert.progress}
+               aria-valuemin={0}
+               aria-valuemax={100}
+               style={{ width: `${cert.progress}%` }}>
+            {cert.progress === 100 ? 'Completed' : 'In Progress'}
           </div>
         </div>
-        
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {certifications.map((cert, index) => (
-            <div key={index} className="col">
-              <div className="card bg-light text-dark border-0 h-100">
-                <img src={cert.imgUrl} alt={cert.title} className="img-fluid rounded-top"/>
-                <div className="card-body">
-                  <h3 className="card-title">{cert.title}</h3>
-                  <div dangerouslySetInnerHTML={{ __html: cert.htmlContent }} />
+                  </div>
                 </div>
               </div>
             </div>

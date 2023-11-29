@@ -1,6 +1,4 @@
 .hero-section {
-  transition: background 0.3s ease-in-out;
-  animation: fadeInUp 0.5s forwards;
   font-size: clamp(1rem, 2vw, 2rem);
 }
 

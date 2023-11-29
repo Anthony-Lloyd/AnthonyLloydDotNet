@@ -20,7 +20,11 @@ const Home: React.FC = () => {
                     </div>
                     <div className="col-md-6 d-flex justify-content-center">
   <div style={{ maxWidth: "100%", aspectRatio: "16/9", overflow: "hidden" }}>
-    <img src="./home/profile.jpg" alt="Anthony Lloyd" className="img-fluid rounded shadow-lg" />
+  <img
+  src={process.env.PUBLIC_URL + '/home/profile.jpg'}
+  alt="Anthony Lloyd"
+  className="img-fluid rounded shadow-lg"
+/>
   </div>
 </div>
                 </div>

@@ -1,34 +1,41 @@
-Hello, I'm Anthony. Transitioning from a logistics background where precision and problem-solving are paramount, I am now steering my career towards the dynamic realm of technology. My meticulous nature and my passion for process enhancement are the driving forces behind my ambition to contribute meaningfully to the tech industry.
 
-## My Interests in Tech
+## About Me
+At home, my greatest motivation comes from my family—my wife Kaytlan and son Mason. I am deeply committed to being a reliable provider, a role model, and a strong leader. Accountability, reliability, and leadership are the core values I uphold in both my personal and professional life.
 
-Technology fascinates me in its capacity for innovation and improvement, especially in areas such as:
+With a strong background in logistics and a deep passion for technology, I bring hands-on experience and a solution-oriented mindset to the IT field. In my current role as a forklift driver, I specialize in process optimization and problem resolution, ensuring that operations run smoothly and efficiently. While I have built a solid foundation in technology, I am driven by a desire to grow further within the IT sector and become a well-rounded professional in the field.
 
-- **Networking:** I take pleasure in constructing efficient and secure systems that stand the test of demand and scalability.
-- **Cybersecurity:** With a vigilant eye on privacy and data protection, I employ various methods to safeguard digital information.
-- **Open Source Software:** My preference leans towards open-source solutions, valuing transparency and community-driven development.
-- **Automation:** I am intrigued by the efficiency that scripting and AI can bring to routine tasks, saving time and reducing error.
-- **Unix/Linux:** The transition from Windows to Linux has been rewarding, as I embrace the control and stability it offers for my personal computing.
+### Continuous Learning & Certifications
+I am committed to ongoing self-improvement through practical projects and formal education. My home lab allows me to experiment with new technologies, and I am pursuing an IT diploma to formalize my knowledge. This combination of hands-on experience and certification will support my goal of advancing in IT.
 
-## Tech Proficiency
+## Technical Experience & Projects
 
-My toolkit includes a range of technologies that I am proficient in and continually expanding upon:
+### Local Hosting & Hardware Projects
+I maintain a home server and manage a variety of services that reduce my reliance on cloud platforms. This project showcases my problem-solving skills and commitment to self-sufficiency.
 
-- **Windows & Windows Server:** Proficient in managing and ensuring the security of Windows-based systems.
-- **GNU/Linux:** Skilled in the use of Debian-based distributions for both personal and professional projects.
-- **Nmap:** Utilized for thorough network discovery and security audits.
-- **Wireshark:** Employed for in-depth analysis of network traffic and effective troubleshooting.
-- **Metasploit:** Practiced in exploiting vulnerabilities to enhance system security.
-- **OpenVPN & Wireguard:** Configured for secure and private access to my home network.
-- **OpenWRT & DD-WRT:** Adapted routers with custom firmware to bolster functionality and security.
-- **VirtualBox:** Established virtualized environments for development and educational purposes.
+Key Components:
+- **Server Setup**: Machinist X99 MR9A PLUS, Xeon E5-2683v4, 128GB RAM, 10x 3.6TB SAS HDDs, Nvidia P400, HPE 560 SFP+, LSI SAS 9300-16i.
+- **Workstation**: Asus Z690D4 TUF Gaming Plus WiFi, Intel i7-12700K, 64GB DDR4 3600, Nvidia 4070Ti, Be Quiet! Silent Base 802, Arctic Liquid Freezer V2.
+- **Cameras**: Reolink Duo3 POE for security monitoring.
+- **UPS**: CyberPower UPS for reliability during power outages.
 
-## Learning and Development
+### Networking & Security
+I am constantly learning how to secure networks and optimize system configurations. While I’m familiar with many networking tools and security protocols, I am still in the process of expanding my expertise.
 
-Committed to perpetual learning and professional evolution, here's what I'm currently focusing on:
+Key Network Components:
+- **Wireless Access Points**: Netgear D7800
+- **Gateway**: Nanopi R4S for solid performance.
+- **Switches**: Juniper EX2200 24-port POE managed switch, 6-port managed switch with SFP+ and 2.5GbE.
 
-- **Certifications:** Working towards obtaining industry-recognized certifications to affirm my technical competencies.
-- **Hands-On Projects:** Challenging myself with projects that stretch the limits of my technical know-how.
-- **Home LAN:** Continuously enhancing my home network with small SoC devices and custom-configured routers for applications like media servers and network-attached storage.
-- **Web Development:** Developing applications such as this portfolio using React.js to showcase responsive and interactive web design.
-- **Collaboration:** Eager to collaborate within the tech community, sharing insights and gaining knowledge from industry experts.
+## Technical Skills & Continuous Growth
+
+### Operating Systems & Virtualization
+- **Linux (Debian-based)**: Experienced in managing Linux servers and utilizing virtualization tools such as Proxmox, VirtualBox, and TrueNAS for storage and system management.
+- **Networking & Router Configurations**: intermediate expertise in OpenWRT for network setups.
+
+### Development & Scripting
+- **Web Development**: Comfortable with JavaScript, TypeScript, and NPM for frontend work.
+- **Python & Bash Scripting**: reasonably comfortable in Python for automating tasks, with experience in bash scripting for Linux processes.
+
+### Security Tools
+- **Nmap, Wireshark, Metasploit**: Familiar with network discovery, vulnerability assessments, and security audits.
+- **VPNs**: Experienced in configuring secure VPNs for data protection.

@@ -1,6 +1,6 @@
 # Diploma of Information Technology (Cyber Security and Advanced Networking)
 ![image](/certifications/MONARCH.png)
-![status](45%)
+![status](55%)
 ![description]/ Cybercrime prevention, promoting workplace cybersecurity awareness, and networking best practices./ Analyzing and interpreting threat data to protect organizational infrastructure and utilizing design methodologies for security architecture./ Installing and managing virtual computing environments, along with upgrading operating systems and configuring advanced virtual networks./ Developing incident response plans, reviewing disaster recovery and contingency plans, and planning and testing enterprise communication solutions.
 
 ---
@@ -21,19 +21,19 @@
 
 # Miscrosoft Certified: Azure Fundamentals
 ![image](/certifications/AZ0.svg)
-![status](25%)
+![status](5%)
 ![description]/ Fundamental cloud concepts, including an overview of cloud services and how they can provide value to the business./ Core Azure services, their architecture, and how they can be utilized for various business scenarios./ Azure management and governance, which includes tools and features available for managing and governing resources within Azure.
 
 ---
 
 # INE Certified Cloud Associate
 ![image](/certifications/ICCA.png)
-![status](25%)
+![status](5%)
 ![description]/ Understanding of cloud foundations, management concepts, and the fundamentals of identity, security, and compliance./ Demonstrating knowledge of the benefits of various cloud services and their associated cost structures./ Mastery of the Shared Responsibility Model, cloud support models, and selecting appropriate management tools./ Skills in Infrastructure-as-a-Service (IaaS) including cloud compute instances, networking configuration, and cloud storage characteristics.
 
 ---
 
 # eLearn Security Junior Penetration Tester
 ![image](/certifications/EJPT.png)
-![status](70%)
+![status](75%)
 ![description]/ Essential penetration testing skills and concepts, suitable for an entry-level role in cybersecurity./ Assessment methodologies and enterprise auditing techniques for host, network, and web application penetration testing./ Practical, real-world skills that penetration testers use during engagements, provided through hands-on testing experience.

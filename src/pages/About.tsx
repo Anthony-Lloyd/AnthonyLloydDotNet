@@ -45,7 +45,6 @@ const About: React.FC = () => {
       <div className="container">
         <div className="row justify-content-center mb-5">
           <div className="col-lg-8 text-center">
-            <h2 className="display-4 mb-4">About Me</h2>
             <div className="lead" dangerouslySetInnerHTML={createMarkup(intro)}></div> {/* Rendered using dangerouslySetInnerHTML */}
           </div>
         </div>

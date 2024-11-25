@@ -17,7 +17,7 @@ const Home: React.FC = () => {
                     <div className="col-md-6">
                         <h1 className="display-1">Anthony Lloyd</h1>
                         <p className="lead mb-4">
-                            21-year-old IT enthusiast with a passion for networking and cybersecurity.
+                        I’m Anthony Lloyd, a passionate IT enthusiast focused on building a career in networking, cybersecurity, and open-source development. With a background in problem-solving and a keen eye for detail, I aim to leverage my skills to create meaningful technological solutions.
                         </p>
                         <div>
                             {/* LinkedIn Button */}
@@ -32,9 +32,9 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center">
-                        <div style={{ maxWidth: "100%", aspectRatio: "16/9", overflow: "hidden" }}>
+                        <div style={{ maxWidth: "100%", overflow: "hidden" }}>
                             <img
-                                src={process.env.PUBLIC_URL + '/home/profile.png'}
+                                src={process.env.PUBLIC_URL + '/home/profile.JPG'}
                                 alt="Anthony Lloyd"
                                 className="img-fluid rounded shadow-lg"
                             />
